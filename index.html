@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="shortcut icon" href="android-chrome-192x192.png" type="image/x-icon">
+    <title>Simrandeep Singh - Developer Portfolio</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <h3>Simran's Portfolio</h3>
+            </li>
+            <div id="links">
+                <li><a href="#">About Me</a></li>
+                <li><a href="mydream.html">My Dreams</a></li>
+
+            </div>
+        </ul>
+    </nav>
+    <main class="content">
+        <section class="section1">
+            <div class="info">
+                <p class="para">Hi, My name is <span class="textcol">Simrandeep Singh</span></p>
+                <p class="para"> and I am a passionate </p>
+                <p class="para"> <span class="profession">Data Analyst and Web Developer</span></p>
+                <button class="btn"><a href="#">Contact Me</a></button>
+                <button class="btn" id="git"><a href="https://github.com/simrandeep111/simrandeep111.github.io">&nbsp;Github &nbsp; </a></button>
+            </div>
+        </section>
+        <section class="section2">
+            <div>
+                <img src="dev.png" alt="No Image" class="image">
+            </div>
+            </section>
+            
+            </main>
+            <section>
+                <div class="line"></div>
+                
+                <p class="textcol" id="work">What I have done so far</p>
+                <p class="para" id="edu">Education</p>
+                </section>
+                <section class="boxes">
+                    <div class="box1">
+                        <h3>English and Computer School</h3>
+                        <p class="inside">Web Development</p>
+                        <p class="inside">I have experience in web development, working with HTML, CSS, JavaScript, PHP, and frameworks like Django and Laravel.</p>
+                    </div>
+                    <div class="box2">
+                        <h3>Brillica Services</h3>
+                        <p class="inside">Data Analytics</p>
+                        <p class="inside">I have experience as a data analyst, utilizing Power BI, Tableau, Python, machine learning, SQL, and advanced Excel from Brillica Services.</p>
+                    </div>
+                    <div class="box3">
+                        <h3>Ws CubeTech</h3>
+                        <p class="inside">Cybersecurity and Ethical Hacking</p>
+                        <p class="inside">
+                            I have completed cybersecurity and ethical hacking training from WS Cube Tech, gaining essential skills and knowledge in this field.</p>
+                    </div>
+                    <div class="box4">
+                        <h3>Humber College</h3>
+                        <p class="inside">Diploma in Computer Programming</p>
+                        <p class="inside">
+                            I have completed a diploma in computer programming, gaining comprehensive knowledge and skills in software development and coding.</p>
+                    </div>
+
+                </section>
+               
+    <footer class="education">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>Simrandeep Singh</h3>
+                <p>I am a passionate data analyst, dedicated to uncovering insights and driving decisions through data analysis, visualization, and interpretation.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: simrandeepsingh1000@gmail.com</p>
+                <p>Phone: 437-996-7965</p>
+                <p>Address: 6 Angelucci Drive Brampton, Ontario</p>
+            </div>
+        </div>
+
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const boxes = document.querySelectorAll('.box1, .box2, .box3, .box4');
+
+        function checkScroll() {
+            const triggerBottom = window.innerHeight / 5 * 4;
+
+            boxes.forEach(box => {
+                const boxTop = box.getBoundingClientRect().top;
+
+                if (boxTop < triggerBottom) {
+                    box.classList.add('scroll-in');
+                    if (box.classList.contains('box1') || box.classList.contains('box3')) {
+                        box.classList.add('scroll-in-left');
+                    } else {
+                        box.classList.add('scroll-in-right');
+                    }
+                } else {
+                    box.classList.remove('scroll-in');
+                    box.classList.remove('scroll-in-left');
+                    box.classList.remove('scroll-in-right');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkScroll);
+
+        // Initial check
+        checkScroll();
+    });
+</script>
+
+</body>
+
+</html>
